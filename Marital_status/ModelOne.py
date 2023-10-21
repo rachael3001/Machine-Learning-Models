@@ -1,9 +1,9 @@
 import pandas as pd
 from  matplotlib import *
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, ConfusionMatrixDisplay
 
 
 df = pd.read_csv("HR_Analytics.csv")
@@ -41,3 +41,8 @@ print(accuracy_score(y_test, y_pred))
 cm = confusion_matrix(y_test,y_pred)
 ConfusionMatrixDisplay(confusion_matrix=cm).plot()
 plt.show()
+
+precision = precision_score(y_test, y_pred, average='weighted')
+recall = recall_score(y_test, y_pred, average = "weighted")
+
+print(precision, recall)
