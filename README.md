@@ -1,5 +1,5 @@
-# Classification Models
- Work showcasing my classification skills:
+# Machine Learning Models
+ Work showcasing my machine learning skills, I run both classification and regression models.
  
  Marital Status 
   I began predicting Marital status in a HR analytics dataset. I used random forest regression and before tuning I got 64% and after tuning I got 65% accuracy. After increasing size of training data my score went to 69%. I also tried KNN model where accuracy was worse.
