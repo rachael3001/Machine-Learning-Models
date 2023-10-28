@@ -32,14 +32,14 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-#Ran LinearRegression()
+#Ran LinearRegression scoring 0.7344662
 lr = LinearRegression()
 lr.fit(X_train, y_train)
 y_pred  = lr.predict(X_test)
 test_score_lr = lr.score(X_test, y_test)
 print("The test score for lr model is {}".format(test_score_lr))
 
-
+#Then Ridge scoring 0.7356232
 ridgeReg = Ridge(alpha=10)
 ridgeReg.fit(X_train,y_train)
 test_score_ridge = ridgeReg.score(X_test, y_test)
